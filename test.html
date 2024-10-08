@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sir Test</h1>
+
+    <script>
+// ========================== QUESTION - 1 (PRINT GRADE) ======================
+        function grade(num) {
+            if (num <= 100 && num > 80) {
+                return "A Grade";
+            } else if (num <= 80 && num > 60) {
+                return "B Grade";
+            } else if (num <= 60 && num > 40) {
+                return "C Grade";
+            } else if (num <= 40 && num > 20) {
+                return "D Grade";
+            } else {
+                return "F Grade";
+            }
+        }
+        console.log(grade(86))
+
+// ============ QUESTION NUMBER - 2 (PRINT ODD NUMBER) ==================
+        let num = 0;
+        while (num <= 100) {
+            if (num % 2 === 1) {
+                console.log(num)
+            }
+            num++
+        }
+// ============= QUESTION - 3  (WHAT IS THE OUTPUT OF THIS QUESTION) ============
+        const numbers = [1, 2, 3, 4, 5];
+        const doubled = numbers.map(num => num * 2)
+        console.log(doubled)
+
+// ============= QUESTION - 4  (check if a string contains a specific substring) ==========
+        let str = "hello, world!"
+        let substr = str.includes('hello')
+        console.log(substr)
+        // output is true
+
+// ============= QUESTION - 5  (add a new property to an existing object?) ============
+        let obj = {
+            fname: "Anil",
+            lname: "Chaudhary",
+        }
+        obj.age = 22;
+        console.log(obj)
+
+// ============= QUESTION - 6  (Write a function called sum that takes two parameters and add them) ============
+        function sum(a, b) {
+            return a + b;
+        }
+        console.log(sum(5, 10));
+        // output is 15 
+
+// ============= QUESTION - 7  (write a function for fibnochi number) =======================
+        function fibnochi(num) {
+            let fib = [0, 1];
+            while (num > fib.length) {
+                fib.push(fib[fib.length - 1] + fib[fib.length - 2])
+            }
+            return fib
+        }
+        console.log(fibnochi(5));
+
+// ============= QUESTION - 8  (write a function for Function constructor) ============
+        function student(name, age, course) {
+            this.name = name
+            this.age = age
+            this.course = course
+        }
+        let student1 = new student("anil chaudhary", 22, "frontend developer");
+        console.log(student1)
+
+// ============= QUESTION - 9  (Explain how the this keyword behaves in a method of an object) ============
+        let obj1 = {
+            fname: "vikas",
+            lname: "chaudhary",
+            fullName: function () {
+                return this.fname + " " + this.lname
+            }
+            // this keyword refer to the object when the function is proprty of.
+            // and the value of this keyword depend on the object that is invoking the function.
+        }
+
+        console.log(obj1.fullName());
+
+ // ============= QUESTION - 10  (takes a string as input and converts all the lowercase letters to uppercase) ============
+        function convertToUppercase(str) {
+            let result = '';
+
+            for (let i = 0; i < str.length; i++) {
+                let asciiCode = str.charCodeAt(i);
+                if (asciiCode >= 97 && asciiCode <= 122) {
+                    result += String.fromCharCode(asciiCode - 32);
+                } else {
+                    result += str[i];
+                }
+            }
+            return result;
+        }
+        console.log(convertToUppercase("hello"));
+         // Output: HELLO
+
+
+    </script>
+</body>
+
+</html>
